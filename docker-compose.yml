@@ -1,0 +1,43 @@
+services:
+  anomalib-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: anomalib-cfa-api
+
+    ports:
+      - "8000:8000"       # host:container  →  access via http://localhost:8000
+
+    volumes:
+      # Mount your local dataset into the container.
+      # Change ./data to the actual path on your machine if different.
+      - ./data:/data
+
+      # Persist the trained model checkpoint between container restarts.
+      - ./app/model:/app/app/model
+
+      # Persist prediction result images between container restarts.
+      - ./app/prediction_results:/app/app/prediction_results
+
+    environment:
+      - PYTHONUNBUFFERED=1
+
+    # Uncomment the section below if you have an NVIDIA GPU and
+    # nvidia-container-toolkit installed:
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+    restart: unless-stopped
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/status"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s

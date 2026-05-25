@@ -1,0 +1,28 @@
+# Git
+.git
+.gitignore
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+*.egg-info/
+
+# Dataset (mounted at runtime, not baked into image)
+data/
+
+# Saved model & results (mounted at runtime)
+app/model/
+app/prediction_results/
+app/uploaded_images/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Docs
+README.md
