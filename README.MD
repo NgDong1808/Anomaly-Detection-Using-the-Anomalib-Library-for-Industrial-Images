@@ -1,7 +1,7 @@
 # Anomalib CFA Anomaly Detection API
 
 A lightweight REST API for training and running an anomaly detection model on industrial images.  
-Built with [FastAPI](https://fastapi.tiangolo.com/) and [Anomalib](https://github.com/openvinotoolkit/anomalib), using the **CFA** (Coupled Flow Attention) algorithm.
+Built with [FastAPI](https://fastapi.tiangolo.com/) and [Anomalib](https://github.com/openvinotoolkit/anomalib), using the **CFA** (Coupled-hypersphere-based Feature Adaptation) algorithm.
 
 ---
 
