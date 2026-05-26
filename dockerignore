@@ -11,7 +11,6 @@ __pycache__/
 *.egg-info/
 
 # Dataset (mounted at runtime, not baked into image)
-data/
 
 # Saved model & results (mounted at runtime)
 app/model/
