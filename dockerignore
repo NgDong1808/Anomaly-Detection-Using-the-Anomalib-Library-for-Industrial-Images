@@ -10,12 +10,10 @@ __pycache__/
 .venv/
 *.egg-info/
 
-# Dataset (mounted at runtime, not baked into image)
-
 # Saved model & results (mounted at runtime)
 app/model/
 app/prediction_results/
-app/uploaded_images/
+
 
 # IDE & OS
 .vscode/
@@ -23,5 +21,3 @@ app/uploaded_images/
 .DS_Store
 Thumbs.db
 
-# Docs
-README.md
