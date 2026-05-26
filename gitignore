@@ -1,0 +1,18 @@
+
+# Model checkpoint
+app/model/
+
+# Prediction results
+app/prediction_results/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
